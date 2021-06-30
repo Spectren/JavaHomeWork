@@ -1,4 +1,4 @@
-package cars;
+package com.company.cars;
 
 public class PayloadCar extends Car {
     private int payload;

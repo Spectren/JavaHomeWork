@@ -1,4 +1,4 @@
-package Statistics;
+package com.company.Statistics;
 
 public interface FullCosts {
     double getFullCost();

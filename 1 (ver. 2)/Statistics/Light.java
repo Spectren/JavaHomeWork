@@ -1,10 +1,8 @@
-package Statistics;
+package com.company.Statistics;
 
-import ru.kor.cars.Car;
+import com.company.cars.Car;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Light implements FullCosts {

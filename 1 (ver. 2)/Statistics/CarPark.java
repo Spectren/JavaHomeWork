@@ -1,10 +1,9 @@
-package Statistics;
+package com.company.Statistics;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static java.lang.Integer.parseInt;
-
 
 public class CarPark {
     private Light lights;
@@ -14,13 +13,13 @@ public class CarPark {
     FullCosts[] fullCosts;
 
     public CarPark(String[] inputData) {
-        this.lights = new Light(46.1, 12.5);
-        this.freights = new CarWithPayload(48.9, 12.0,
+        this.lights = newGarage(46.1, 12.5);
+        this.freights = newGarage(48.9, 12.0,
                 "грузовые автомобили", "объем перевезенного груза см. куб.");
-        this.passengers = new CarWithPayload(47.5, 11.5,
+        this.passengers = newGarage(47.5, 11.5,
                 "пассажирский транспорт",
                 "число перевезенных пассажиров");
-        this.heavies = new CarWithPayload(48.9, 20.0,
+        this.heavies = newGarage(48.9, 20.0,
                 "тяжелая техника(краны)",
                 "вес поднятых грузов тонн");
 
@@ -51,12 +50,13 @@ public class CarPark {
         fullCosts = new FullCosts[]{this.lights, this.freights, this.passengers, this.heavies};
     }
 
-    //        Необходимо:
-//        общую стоимость расходов на ГСМ, так и расходы на каждый класс авто
-//        тип авто имеющий наибольшую стоимость расходов
-//        тип авто имеющий наименьшую стоимость расходов
-//        реализовать функции которые в разрезе каждого типа авто выводят информацию о каждом авто (тип, номер, пробег, доп. параметр), с сортировкой по пробегу и доп параметру.
-//        желательно спроектировать иерархию классов
+    public static CarWithPayload newGarage(double a, double b, String c, String d) {
+        return new CarWithPayload(a, b, c, d);
+    }
+    public static Light newGarage(double a, double b) {
+        return new Light(a, b);
+    }
+
     public void printTotalCostOfAllCarExpenses() {
         double totalCostOfAllCarExpenses = 0;
         for (FullCosts transpStat : fullCosts) {

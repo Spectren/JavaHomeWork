@@ -1,10 +1,8 @@
-package Statistics;
+package com.company.Statistics;
 
-import ru.kor.cars.PayloadCar;
+import com.company.cars.PayloadCar;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class CarWithPayload implements FullCosts {
